@@ -10,11 +10,11 @@ import java.util.List;
 
 public class MainPage {
 
-    private final static By AUTOS = By
+    private static final  By AUTOS = By
             .xpath("//span[@class=\"b-main-navigation__text\" and contains(text(),'Автобарахолка')]");
-    private final static By HOMESANDFLATS = By
+    private static final  By HOMESANDFLATS = By
             .xpath("//span[@class=\"b-main-navigation__text\" and contains(text(),'Дома и квартиры')]");
-    private final static By SUBMENU = By
+    private static final  By SUBMENU = By
             .xpath("//span[@class=\"b-main-navigation__dropdown-advert-sign\"]");
 
 
