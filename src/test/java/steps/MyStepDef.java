@@ -1,11 +1,12 @@
 package steps;
 
-import pages.MainPage;
-import io.cucumber.java.ru.Если;
-import io.cucumber.java.ru.То;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pages.MainPage;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -14,7 +15,7 @@ public class MyStepDef {
     public static WebDriver driver;
     public static MainPage mainPage = new MainPage();
 
-    @Если("open onliner.by")
+    @When("open onliner.by")
     public void openWebSite() {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
@@ -23,17 +24,17 @@ public class MyStepDef {
         driver.get("https://www.onliner.by/");
     }
 
-    @Если("hover over the item Autobaraholcka market")
+    @And("hover over the item Autobaraholcka market")
     public void hoverOverTheItemAuto() {
         mainPage.hoverOverTheItemAuto(driver);
     }
 
-    @Если("hover over the item Houses and Flats market")
+    @And("hover over the item Houses and Flats market")
     public void hoverOverTheItemHouses() {
         mainPage.hoverOverTheItemHouses(driver);
     }
 
-    @То("a submenu appears")
+    @Then("a submenu appears")
     public void findSubmenuWithCategories(List<String> args) {
 
         for (String s : args) {

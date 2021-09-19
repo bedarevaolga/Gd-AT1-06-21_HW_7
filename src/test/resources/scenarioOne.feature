@@ -6,6 +6,6 @@ Feature: Using the site onliner.by
     When open onliner.by
     And  hover over the item Autobaraholcka market
     Then a submenu appears
-      |Авто до 20 000 р.|
+      |Авто до 10 000 р.|
       |Минск|
       |BMW|
